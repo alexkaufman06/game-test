@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid #d3d3d3;
+  background-image: url('http://www.wired.com/images_blogs/wiredscience/2013/12/ISS036-E-002780_lrg.jpg');
+  background-repeat: no-repeat;
+}
+
+html, body {
+  overflow:
+}
+</style>
+</head>
+<body onload="startGame()">
+<script>
+
+function startGame() {
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 1300;
+        this.canvas.height = 900;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    }
+}
+
+</script>
+
+</body>
+</html>
